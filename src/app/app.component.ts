@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'LifeCycleHook';
+  title = 'LifecycleHook';
+
+  inputText: string = '';
+  destroy: boolean = true;
+
+  OnSubmit(inputEl: HTMLInputElement){
+    this.inputText = inputEl.value;
+  }
+
+  DestroyComponent(){
+    this.destroy = false;
+  }
 }
